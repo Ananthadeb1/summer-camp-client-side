@@ -7,9 +7,11 @@ import Swal from 'sweetalert2';
 // import SocialLogin from '../../Shared/SocialLogin';
 import { AuthContext } from '../../providers/AuthProvider';
 import SocialLogin from '../Shared/Sociallogin';
+// import useAdmin from '../../hooks/userAdmin';
 
 
 const Login = () => {
+    
     const { register, reset, formState: { errors } } = useForm();
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -41,6 +43,7 @@ const Login = () => {
                 navigate(from, { replace: true });
             })
     }
+     
 
     return (
         <div>

@@ -19,6 +19,7 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <Error></Error>,
       children: [
         {
         path: '/',
@@ -62,9 +63,5 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 
         ]
 
-    },
-    {
-        path: '*',
-        element: <Error></Error>
     }
   ]);
