@@ -1,0 +1,184 @@
+ [
+      {
+        "name": "Defense Against the Dark Arts",
+        "instructor": "Professor Remus Lupin",
+        "availableSeats": 25,
+        "students": 22,
+        "price": 50,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/7hJaMsH80AOZKZXffaaoQR/5997ee185eb2dda7123254a06d2e326c/harry-potter-shop-wands-avada-kedavra.jpg?w=914&q=70&fm=webp",
+        "category": "popular"
+      },
+      {
+        "name": "Potions",
+        "instructor": "Professor Severus Snape",
+        "availableSeats": 20,
+        "students": 25,
+        "price": 40,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/I07OzPpHfP2FNbe3Qk3vV/de4ee4f70fa222e9c5c57eefd7911554/harry-potter-shop-wands-snape-photoshoot.jpg?w=914&q=70&fm=webp",
+        "category": "classic"
+      },
+      {
+        "name": "Charms",
+        "instructor": "Professor Filius Flitwick",
+        "availableSeats": 15,
+        "students": 21,
+        "price": 30,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/3xaUpC8yxhXQEeVfsVE3du/082b529a81ff4b2d50895486b5de8d14/harry-potter-wands-photoshoot-expelliarmus.jpg?w=914&q=70&fm=webp",
+        "category": "popular"
+      },
+      {
+        "name": "Transfiguration",
+        "instructor": "Professor Minerva McGonagall",
+        "availableSeats": 18,
+        "students": 23,
+        "price": 35,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/2si7SC1s6jMH1ikANzfOBI/830682a3619c6201fb8abd2d868edd84/WBSTT-ministry-of-magic-statues-on-display.jpg",
+        "category": "classic"
+      },
+      {
+        "name": "Herbology",
+        "instructor": "Professor Pomona Sprout",
+        "availableSeats": 20,
+        "students": 30,
+        "price": 40,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/23VZyGVSg8MyMieGeg04qk/f90f1d059b7998a78243b25c91a022e0/MandrakeSeedlings_PM_B2C6M2_MandrakeSeedlingsInHerbologyLesson_Moment.jpg?w=914&q=70&fm=webp",
+        "category": "classic"
+      },
+      {
+        "name": "Divination",
+        "instructor": "Professor Sybill Trelawney",
+        "availableSeats": 12,
+        "students": 21,
+        "price": 25,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/5STpKrScRCQGr3XSXt1wJc/8118b31e301a948ec4b98183a5918866/WBSTT-magic-is-might-statue.jpg",
+        "category": "popular"
+      },
+      {
+        "name": "Care of Magical Creatures",
+        "instructor": "Professor Rubeus Hagrid",
+        "availableSeats": 15,
+        "students": 20,
+        "price": 30,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/1Q2rxla49W5WzVJAA3KsKt/1d0814d7505c9f9b99e65297cf9b852a/PH_GamePlayTrailerThumb_Screenshot_13.png?w=914&q=70&fm=webp",
+        "category": "popular"
+      },
+      {
+        "name": "Ancient Runes",
+        "instructor": "Professor Bathsheda Babbling",
+        "availableSeats": 10,
+        "students": 24,
+        "price": 20,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/puaeQFCoxUAfuXVv3vSbg/cd342e08283b32b865f971c16fbb9ba9/hog-leg-game-guide-insert-3-field-guide.jpg?w=914&q=70&fm=webp",
+        "category": "classic"
+      },
+      {
+        "name": "History of Magic",
+        "instructor": "Professor Cuthbert Binns",
+        "availableSeats": 12,
+        "students": 22,
+        "price": 25,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/4G3D0lZZLui8gO48BXmzFq/44e7e9577d9c8cb9810d8fc0e17a6d34/hog-leg-game-guide-insert-1-pledge-alleigance.jpg?w=914&q=70&fm=webp",
+        "category": "classic"
+      },
+      {
+        "name": "Arithmancy",
+        "instructor": "Professor Septima Vector",
+        "availableSeats": 12,
+        "students": 26,
+        "price": 25,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/3NQVQ9QKam6ultZPwky7IG/c7780365d1244fa55ae11c17101edfee/wizarding-almanac-timelines.jpg?w=914&q=70&fm=webp",
+        "category": "popular"
+      },
+      {
+        "name": "Astronomy",
+        "instructor": "Professor Aurora Sinistra",
+        "availableSeats": 14,
+        "students": 18,
+        "price": 30,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/k6mUVKTpDjV7YpopUSZaE/ff72ed73c127f441e7f627a6b453b3cb/wizarding-almanac-spreads-patronus.jpg?w=914&q=70&fm=webp",
+        "category": "popular"
+      },
+      {
+        "name": "Magical Theory",
+        "instructor": "Professor Albus Dumbledore",
+        "availableSeats": 20,
+        "students": 28,
+        "price": 40,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/6UdXJcWF3HpardONBUHBMc/d00a37b92f444c1ce85cc2b4f0e14782/almanac-spreads-updated-weasleys-wizard-wheezes.jpg?w=914&q=70&fm=webp",
+        "category": "classic"
+      },
+      {
+        "name": "Quidditch Training",
+        "instructor": "Madam Hooch",
+        "availableSeats": 10,
+        "students": 12,
+        "price": 35,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/Lx8JShmGQ9U5U4HxJ2CHK/fe0bddbe862657888ed6970f15663c00/PH_GamePlayTrailerThumb_Screenshot_4.png?w=914&q=70&fm=webp",
+        "category": "popular"
+      },
+      {
+        "name": "Magical Herbology",
+        "instructor": "Professor Neville Longbottom",
+        "availableSeats": 15,
+        "students": 20,
+        "price": 30,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/1F0LR5Uz0aTCGOUbPcinoO/049c1e628bb246a43b58794477ec78a3/TfxMLBzo.jpeg?w=914&q=70&fm=webp",
+        "category": "classic"
+      },
+      {
+        "name": "Apparition Training",
+        "instructor": "Professor Wilkie Twycross",
+        "availableSeats": 10,
+        "students": 16,
+        "price": 40,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/2oIBxTDTEF670QeTgttcLI/bca03033ef74d2f2305c23ddfe672cbf/v05NBWM4.jpeg?w=914&q=70&fm=webp",
+        "category": "classic"
+      },
+      {
+        "name": "Magical Creatures Care and Rehabilitation",
+        "instructor": "Professor Newt Scamander",
+        "availableSeats": 15,
+        "students": 22,
+        "price": 35,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/7ec5Xu9G05AMKRMhkhzrz5/d86b355b5e0f6aff441cbe740ff0ac8e/Screen_Shot_2023-01-23_at_11.06.37_AM.png?w=914&q=70&fm=webp",
+        "category": "popular"
+      },
+      {
+        "name": "Muggle Studies",
+        "instructor": "Professor Charity Burbage",
+        "availableSeats": 20,
+        "students": 25,
+        "price": 30,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/7r1BdpcmFHIzNjk45QPjzy/06fb95d59cc5236239e2d9f6a2556c4f/Screenshot_2022-11-01_12-37-10_Ben__2_.jpg?w=914&q=70&fm=webp",
+        "category": "classic"
+      },
+      {
+        "name": "Ancient Runes Advanced",
+        "instructor": "Professor Griselda Marchbanks",
+        "availableSeats": 8,
+        "students": 10,
+        "price": 45,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/3uKgyY1acX7bncuXyY8OOA/a79a84883e90e1fd057e6e056d8511b6/WhatsApp_Image_2020-09-16_at_9.46.32_PM__1_.jpeg?w=914&q=70&fm=webp",
+        "category": "popular"
+      },
+      {
+        "name": "Magical History",
+        "instructor": "Professor Bathilda Bagshot",
+        "availableSeats": 15,
+        "students": 18,
+        "price": 30,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/60THEM7uPqzm35w58aTnxF/ab4ff9a547d4b628d9f9a6faeacebcf3/Screen_Shot_2020-09-30_at_15.12.37.png?w=914&q=70&fm=webp",
+        "category": "classic"
+      },
+      {
+        "name": "Wizarding Arts",
+        "instructor": "Professor Phineas Phileas",
+        "availableSeats": 12,
+        "students": 14,
+        "price": 25,
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/3G9oAGoKlXh8Xry3bqxTxo/46cd560c441c9c41e5cc9f00e432d7c2/hogwarts-dark-legacy-screenshot-spell.jpg?w=914&q=70&fm=webp",
+        "category": "popular"
+      }
+ ]      
+      
+  

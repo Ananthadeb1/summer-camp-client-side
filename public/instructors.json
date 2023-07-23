@@ -1,0 +1,211 @@
+[
+      {
+        "name": "Professor Minerva McGonagall",
+        "email": "mcgonagall@hogwarts.edu",
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/11/Minerva-McGonagall-Harry-Potter.jpg?q=50&fit=crop&w=750&dpr=1.5",
+        "category": "popular",
+        "numClasses": 3,
+        "classes": [
+          "Transfiguration",
+          "Advanced Transfiguration",
+          "Animagus Training"
+        ]
+        
+      },
+      {
+        "name": "Professor Severus Snape",
+        "email": "snape@hogwarts.edu",
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2017/05/snape-header.jpg?q=50&fit=contain&w=943&h=&dpr=1.5",
+        "category": "popular",
+        "numClasses": 2,
+        "classes": [
+          "Potions",
+          "Advanced Potions"
+        ]
+      },
+      {
+        "name": "Albus Percival Wulfric Brian Dumbledore",
+        "email": "flitwick@hogwarts.edu",
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/12Hct2ECf0O4cmM0w0Cy0u/223aa9d61920335609336bb47a080f42/WB_F3_DumbledoreSnape_HP3-FX-462.jpg?w=914&q=70&fm=webp",
+        "category": "popular",
+        "numClasses": 2,
+        "classes": [
+          "Charms",
+          "Advanced Charms"
+        ]
+      },
+      {
+        "name": "Professor Pomona Sprout",
+        "email": "sprout@hogwarts.edu",
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/1mENaCAEWwoiKkYSUUUS20/91437ad3a268506499aa01380efbd7af/PomonaSprout_WB_F1_SproutInHerbologyGreenhouse_Still_080615_Land.jpg?w=914&q=70&fm=webp",
+        "category": "classic",
+        "numClasses": 1,
+        "classes": [
+          "Herbology"
+        ]
+      },
+      {
+        "name": "Professor Sybill Trelawney",
+        "email": "trelawney@hogwarts.edu",
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/04/Sybill-Trelawney.jpg?q=50&fit=crop&w=750&dpr=1.5",
+        "category": "popular",
+        "numClasses": 2,
+        "classes": [
+          "Divination",
+          "Advanced Divination"
+        ]
+      },
+      {
+        "name": "Professor Rubeus Hagrid",
+        "email": "hagrid@hogwarts.edu",
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/09/l-intro-1608582449.jpg?q=50&fit=crop&w=750&dpr=1.5",
+        "category": "popular",
+        "numClasses": 1,
+        "classes": [
+          "Care of Magical Creatures"
+        ]
+      },
+      {
+        "name": "Professor Filius Flitwick",
+        "email": "babbling@hogwarts.edu",
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/04/Flitwick.jpg?q=50&fit=crop&w=750&dpr=1.5",
+        "category": "classic",
+        "numClasses": 1,
+        "classes": [
+          "Ancient Runes"
+        ]
+      },
+      {
+        "name": "Professor Cuthbert Binns",
+        "email": "binns@hogwarts.edu",
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/12/Professor-Aurora-Sinistra.jpg?q=50&fit=crop&w=943&dpr=1.5",
+        "category": "classic",
+        "numClasses": 1,
+        "classes": [
+          "History of Magic"
+        ]
+      },
+      {
+        "name": "Professor Alastor Moody (Barty Crouch Jr.)",
+        "email": "vector@hogwarts.edu",
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/04/Alastor-Moody-1-Cropped.jpg?q=50&fit=crop&w=750&dpr=1.5",
+        "category": "popular",
+        "numClasses": 1,
+        "classes": [
+          "Arithmancy"
+        ]
+      },
+      {
+        "name": "Professor Horace Slughorn",
+        "email": "slughorn@hogwarts.edu",
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/12/photo-2021-12-04-14-14-56.jpg?q=50&fit=crop&w=750&dpr=1.5",
+        "category": "popular",
+        "numClasses": 2,
+        "classes": [
+          "Advanced Potions",
+          "Slug Club"
+        ]
+      },
+      {
+        "name": "Professor Rolanda Hooch",
+        "email": "hooch@hogwarts.edu",
+        "image": "hooch.jpg",
+        "category": "classic",
+        "numClasses": 1,
+        "classes": [
+          "Flying Lessons"
+        ]
+      },
+      {
+        "name": "Professor Lupin",
+        "email": "sinistra@hogwarts.edu",
+        "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2018/08/Remus-Lupin.jpg?q=50&fit=crop&w=750&dpr=1.5",
+        "category": "popular",
+        "numClasses": 1,
+        "classes": [
+          "Astronomy"
+        ]
+      },
+      {
+        "name": "Professor Dolores Umbridge",
+        "email": "slughorn@hogwarts.edu",
+        "image": "https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/03/umbridge.jpg?q=50&fit=crop&w=943&dpr=1.5",
+        "category": "popular",
+        "numClasses": 1,
+        "classes": [
+          "Advanced Potions"
+        ]
+      },
+      {
+        "name": "Professor Gilderoy Lockhart",
+        "email": "bagshot@hogwarts.edu",
+        "image": "https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/03/lockheart.jpg?q=50&fit=crop&w=943&dpr=1.5",
+        "category": "classic",
+        "numClasses": 1,
+        "classes": [
+          "Magical History"
+        ]
+      },
+      {
+        "name": "Professor Quirinus Quirrell",
+        "email": "burbage@hogwarts.edu",
+        "image": "https://static1.srcdn.com/wordpress/wp-content/uploads/2020/11/Quirinus-Quirrell.jpg?q=50&fit=crop&w=943&dpr=1.5",
+        "category": "classic",
+        "numClasses": 1,
+        "classes": [
+          "Muggle Studies"
+        ]
+      },
+      {
+        "name": "Professor Wilkie Rolanda Hooch",
+        "email": "twycross@hogwarts.edu",
+        "image": "https://static1.srcdn.com/wordpress/wp-content/uploads/2019/06/Rolanda-Hooch-from-Harry-Potter-and-the-Sorcerers-Stone.jpg?q=50&fit=crop&w=943&dpr=1.5 ",
+        "category": "popular",
+        "numClasses": 1,
+        "classes": [
+          "Apparition Training"
+        ]
+      },
+      {
+        "name": "Professor Griselda Filius Flitwick",
+        "email": "marchbanks@hogwarts.edu",
+        "image": "https://screenrant.com/harry-potter-best-professors-hogwarts-ranked-teaching-ability/#pomona-sprout",
+        "category": "classic",
+        "numClasses": 1,
+        "classes": [
+          "Ancient Runes Advanced"
+        ]
+      },
+      {
+        "name": "Professor The Carrows",
+        "email": "babbling@hogwarts.edu",
+        "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/04/Amycus--Alecto-Carrow-Harry-Potter-2x1.jpg?q=50&fit=crop&w=943&dpr=1.5",
+        "category": "classic",
+        "numClasses": 1,
+        "classes": [
+          "Ancient Runes"
+        ]
+      },
+      {
+        "name": "Professor Cuthbert Firenze",
+        "email": "binns@hogwarts.edu",
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/4a5LcRi3ygIqOAOEC6WukU/4247a99b31db825765f73dbcf7899be7/HEROFirenze_PM_B5C27_DivinationClassroomHarryRonFirenze_copy.jpg?w=914&q=70&fm=webp",
+        "category": "classic",
+        "numClasses": 1,
+        "classes": [
+          "History of Magic"
+        ]
+      },
+      {
+        "name": "Professor Septima Alecto Carrow",
+        "email": "vector@hogwarts.edu",
+        "image": "https://images.ctfassets.net/usf1vwtuqyxm/5pgCjLxsYMyWUCI8MoG4sm/bdd345276a6d7afdafb04b1646d0bbd7/pm_de_alecto_02_100dpi.jpg?w=914&q=70&fm=webp",
+        "category": "classic",
+        "numClasses": 1,
+        "classes": [
+          "Arithmancy"
+        ]
+    }]
+      
+      
+  

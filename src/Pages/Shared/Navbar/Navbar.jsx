@@ -1,143 +1,86 @@
-import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
-import { AuthContext } from "../../../Provider/AuthProvider";
+
+import { Link } from 'react-router-dom';
+import logo from '../../../../public/logo.jpg'
+import { useContext } from "react";
+import { AuthContext } from '../../../providers/AuthProvider';
+// import useCart from '../hooks/useCart';
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
-  const [navbarOpen, setNavbarOpen] = useState(false);
+    const { user, logOut } = useContext(AuthContext);
+    
+    // const [cart] = useCart();
 
-  const handleLogOut = () => {
-    logOut();
-  };
-  return (
-    <div>
-      <>
-        <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#256D85] text-black mb-3">
-          <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-            <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-              <NavLink
-                to="/"
-                aria-label="Back to homepage"
-                className="flex items-center p-2"
-              >
-                <h1 className="text-2xl md:text-4xl font-bold text-white">
-                  Summer Camp
-                </h1>
-              </NavLink>
-              <button
-                className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-                type="button"
-                onClick={() => setNavbarOpen(!navbarOpen)}
-              >
-                <FaBars></FaBars>
-              </button>
-            </div>
-            <div
-              className={
-                "lg:flex flex-grow items-center" +
-                (navbarOpen ? " flex" : " hidden")
-              }
-              id="example-navbar-danger"
-            >
-              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto font-bold">
-                <li className="flex my-2">
-                  <NavLink
-                    to="/"
-                    className="flex items-center px-4 -mb-1 border-b-2 border-transparent text-white"
-                  >
-                    Home
-                  </NavLink>
-                </li>
-                {user && (
-                  <li className="flex">
-                    <NavLink
-                      to="/dashboard"
-                      className={({ isActive }) =>
-                        isActive
-                          ? "flex items-center px-4 -mb-1 border-b-2 border-pink-500 text-white"
-                          : "flex items-center px-4 -mb-1 border-b-2 border-transparent text-white"
-                      }
-                    >
-                      Dashboard
-                    </NavLink>
-                  </li>
-                )}
-                <li className="flex my-2">
-                  <NavLink
-                    to="/instructors"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "flex items-center px-4 -mb-1 border-b-2 border-pink-500  text-white"
-                        : "flex items-center px-4 -mb-1 border-b-2 border-transparent text-white"
-                    }
-                  >
-                    Instructors
-                  </NavLink>
-                </li>
-                <li className="flex my-2">
-                  <NavLink
-                    to="/classes"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "flex items-center px-4 -mb-1 border-b-2 border-pink-500  text-white"
-                        : "flex items-center px-4 -mb-1 border-b-2 border-transparent text-white"
-                    }
-                  >
-                    Classes
-                  </NavLink>
-                </li>
-                <li className="flex">
-                  {user ? (
-                    <>
-                      <span>{user?.displayName}</span>
-                      {user.photoURL && (
-                        <img
-                          src={user?.photoURL}
-                          alt=""
-                          className="h-12 rounded-full border-primary"
-                        />
-                      )}
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error));
+    }
 
-                      <button onClick={handleLogOut} className="btn btn-ghost">
-                        LogOut
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                    </>
-                  )}
-                </li>
-                <li className="flex">
-                  {user && user.uid ? (
-                    <NavLink
-                      className="inline-block rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75 mt-2 md:mt-0 md:ml-4"
-                    >
-                      <span
-                        onClick={handleLogOut}
-                        className="block rounded-sm bg-white px-8 py-3 text-sm font-medium hover:bg-transparent"
-                      >
-                        Logout
-                      </span>
-                    </NavLink>
-                  ) : (
-                    <NavLink
-                      to="/login"
-                      className="inline-block rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75 mt-2 md:mt-0 md:ml-4"
-                    >
-                      <span className="block rounded-sm bg-white px-8 py-3 text-sm font-medium hover:bg-transparent">
-                        Login
-                      </span>
-                    </NavLink>
-                  )}
-                </li>
-              </ul>
+    const navItems = <>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/instructor'>Instructors</Link></li>
+        <li><Link to='/classes'>Classes</Link></li>
+
+        {
+            user ? <> </> :
+                <>
+                    <li><Link to='/signUp'>Sign Up</Link></li>
+                </>
+        }
+
+{
+            user ? <>
+                <span>{user?.displayName}</span>
+                {user.photoURL && <img src={user.photoURL} alt="" className="h-12 rounded-full border-primary" />}
+
+                <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
+            </> : <>
+                <li><Link to="/login">Login</Link></li>
+            </>
+        }
+    </>
+
+    return (
+        <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black text-white">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-black">
+                        {navItems}
+                    </ul>
+                </div>
+                <div className='flex gap-5'>
+                  <Link to='/'><img className='h-[40px] w-[55px]' src={logo} alt="" /></Link>  
+                  <Link to='/'>   <p className="normal-case text-2xl font-semibold">HOGWARTS <br />
+                    <span className='text-xl text-gray-200 font-semibold'>School of Witchcraft and Wizardry</span>  </p></Link> 
+                </div>
             </div>
-          </div>
-        </nav>
-      </>
-    </div>
-  );
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1">
+                    {navItems}
+                </ul>
+            </div>
+            <div className="navbar-end">
+                {/* <input type="checkbox" className="toggle" checked /> */}
+                <Link  to='/dashboard'><b className='text-base-100 text-lg'>Dashboard</b></Link>
+                { user && 
+                <div className="tooltip tooltip-bottom" data-tip={user.displayName}> 
+                <div className="avatar">
+                    <div className=" w-12 rounded-full ml-4">
+                        {/* <img src={user?.photoURL} /> <br /> */}
+                        
+                    </div>
+                    <div>
+                    {/* <span>{user?.displayName}</span> */}
+                    </div>
+                </div>
+                </div>
+                }
+            </div>
+        </div>
+    );
 };
 
 export default Navbar;
