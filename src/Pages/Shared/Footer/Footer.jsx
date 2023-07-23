@@ -11,7 +11,7 @@ const Footer = () => {
               alt="Logo"
               className="h-12 w-12 mr-2"
             />
-            <h2 className="text-gray-400  text-lg font-semibold">Hogwarts School of <br /> Witchcraft and Wizardry</h2>
+            <h2 className="text-gray-400  text-lg font-semibold">The Witchery School of <br /> Witchcraft and Wizardry</h2>
           </div>
           <div className="flex flex-col md:flex-row items-center mt-4 md:mt-0">
             <div className="md:mr-8">
@@ -73,7 +73,7 @@ const Footer = () => {
                     />
                   </svg>
                   <a href="mailto:info@singerella.com" className="text-gray-400 hover:text-white">
-                    Hogwards@harry.com
+                  TheWitchery@harry.com
                   </a>
                 </li>
                 <li className="flex items-center">
@@ -97,7 +97,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 py-4 bg-gray-800 text-center">
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} Hogwarts. All rights reserved.
+            &copy; {new Date().getFullYear()} The Witchery. All rights reserved.
           </p>
         </div>
       </footer>

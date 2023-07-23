@@ -22,7 +22,7 @@ const PopularInstructor = () => {
 
   return (
     <section className="mb-12">
-        <SectionTitle heading="Best professor of hogwarts " />
+        <SectionTitle heading="Best professor of thewitchery " />
       
 
       <div className="grid gap-4 md:grid-cols-3">

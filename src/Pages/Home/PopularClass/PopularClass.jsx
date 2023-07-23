@@ -22,7 +22,7 @@ const PopularClass = () => {
 
   return (
     <section className="mb-12">
-      <SectionTitle heading="Popular Magical Classes Hogwarts offer " />
+      <SectionTitle heading="Popular Magical Classes Thewitchery offer " />
 
       <div className="grid gap-4 md:grid-cols-3">
         {popularClasses.map((classItem) => (

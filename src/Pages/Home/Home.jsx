@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>HOGWARTS | Home</title>
+        <title>THE WITCHERY | Home</title>
       </Helmet>
       <button className="theme-toggle btn-danger " onClick={toggleTheme}>
         Toggle Theme

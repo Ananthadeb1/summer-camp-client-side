@@ -37,7 +37,7 @@ const ClassesPage = () => {
   return (
     <div className="container bg bg-slate-800 pt-10">
       <div className="bg-slate-400">
-        <SectionTitle heading="Professors of Hogwarts" />
+        <SectionTitle heading="Professors of Thewitchery" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 pb-9">
         {classesData.map((cls) => (
