@@ -10,7 +10,7 @@ const PopularInstructor = () => {
 
   const fetchClasses = async () => {
     try {
-      const response = await fetch("http://localhost:5000/instructors");
+      const response = await fetch("https://assignment-12-sarver.vercel.app/instructors");
       const data = await response.json();
       const sortedClasses = data.sort((a, b) => b.students - a.students);
       const popularClasses = sortedClasses.slice(0, 6);

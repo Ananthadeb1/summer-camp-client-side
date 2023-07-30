@@ -6,15 +6,12 @@ const useAdmin = email => {
     useEffect(() => {
         setAdminLoading(true)
         if (email) {
-            fetch(`http://localhost:5000/users/admin/${email}`,{
-            method : "PATCH",
-        })
+            fetch(`https://assignment-12-sarver.vercel.app/users/admin/${email}`)
                 .then(res => res.json())
                 .then(data => {
                     if (data.isAdmin) {
                         setIsAdmin(data.isAdmin)
                         setAdminLoading(false)
-                        console.log(isAdmin);
                     }
                 })
         }

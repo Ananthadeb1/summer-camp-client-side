@@ -11,7 +11,7 @@ const name = user;
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/classes');
+        const response = await fetch('https://assignment-12-sarver.vercel.app/classes');
         if (response.ok) {
           const data = await response.json();
           setClassesData(data);

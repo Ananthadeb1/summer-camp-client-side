@@ -4,10 +4,8 @@ import { useContext } from "react";
 
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2';
-// import SocialLogin from '../../Shared/SocialLogin';
 import { AuthContext } from '../../providers/AuthProvider';
 import SocialLogin from '../Shared/Sociallogin';
-// import useAdmin from '../../hooks/userAdmin';
 
 
 const Login = () => {

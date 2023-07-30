@@ -38,9 +38,7 @@ const Navbar = () => {
 
       {user ? (
         <>
-          <span >{
-            user?.displayName
-          }</span>
+          <span>{user?.displayName}</span>
           <button onClick={handleLogOut} className="btn btn-ghost">
             LogOut
           </button>
@@ -109,7 +107,7 @@ const Navbar = () => {
           <div className="tooltip tooltip-bottom">
             <div className="avatar">
               <div className=" w-12 rounded-full ml-4">
-                <img  src={user?.photoURL} /> <br />
+                <img src={user?.photoURL} alt="image" /> <br />
               </div>
             </div>
           </div>

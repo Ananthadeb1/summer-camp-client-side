@@ -10,7 +10,7 @@ const PopularClass = () => {
 
   const fetchClasses = async () => {
     try {
-      const response = await fetch("http://localhost:5000/extra");
+      const response = await fetch("https://assignment-12-sarver.vercel.app/extra");
       const data = await response.json();
       const sortedClasses = data.sort((a, b) => b.rating - a.rating);
       const popularClasses = sortedClasses.slice(0, 9);

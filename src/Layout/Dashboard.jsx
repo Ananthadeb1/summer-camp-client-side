@@ -1,10 +1,20 @@
-import  { useState } from 'react';
+import  { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SectionTitle from '../components/SecTitle';
+import useAdmin from '../hooks/useAdmin';
+import { AuthContext } from '../providers/AuthProvider';
+import Loader from '../components/Loader/Loader';
 
 
-const Dashboard = () => {
+const Dashboard = () => { 
+  const { user, loading } = useContext(AuthContext)
+  const [isAdmin] = useAdmin(user?.email)
+  console.log(isAdmin)
+  if (loading) {
+    <Loader></Loader>
+}
+  
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
