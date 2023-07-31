@@ -1,23 +1,21 @@
+import { useEffect, useState } from "react"
 
-
-import { useEffect, useState } from "react";
-
-
-
- 
-
-const useInstructors = () => {
-    const [instructors, setInstructors] = useState([]);
-    const [loading, setLoading] = useState(true);
+const useInstructor = email => {
+    const [isInstructor, setIsInstructor] = useState(false);
+    const [instructorLoading, setInstructorLoading] = useState(true)
     useEffect(() => {
-        fetch('instructors.json')
-            .then(res => res.json())
-            .then(data => {
-                setInstructors(data);
-                setLoading(false);
-            });
-    }, [])
-    return [instructors, loading]
+        if (email) {
+            fetch(`http://localhost:5000/users/instructor/${email}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.isInstructor) {
+                        setIsInstructor(data.isInstructor)
+                        setInstructorLoading(false)
+                    }
+                })
+        }
+    }, [email])
+    return [isInstructor, instructorLoading]
 }
 
-export default useInstructors;
+export default useInstructor;

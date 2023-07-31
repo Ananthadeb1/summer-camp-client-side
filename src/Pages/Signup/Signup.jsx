@@ -22,7 +22,6 @@ const SignUp = () => {
   } = useForm();
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
-
   const onSubmit = (data) => {
     createUser(data.email, data.password)
       .then((result) => {
@@ -36,7 +35,8 @@ const SignUp = () => {
               image: data.photoURL,
               role : selectedOption,
             };
-            fetch("https://assignment-12-sarver.vercel.app/users", {
+            
+            fetch(`https://assignment-12-sarver.vercel.app/users`, {
               method: "POST",
               headers: {
                 "content-type": "application/json",

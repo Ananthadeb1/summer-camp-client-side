@@ -5,12 +5,15 @@ import SectionTitle from '../components/SecTitle';
 import useAdmin from '../hooks/useAdmin';
 import { AuthContext } from '../providers/AuthProvider';
 import Loader from '../components/Loader/Loader';
+import useInstructor from '../hooks/useInstructor';
 
 
 const Dashboard = () => { 
   const { user, loading } = useContext(AuthContext)
   const [isAdmin] = useAdmin(user?.email)
-  console.log(isAdmin)
+  const [isInstructor] = useInstructor(user?.email)
+  console.log("Admin: ",isAdmin)
+  console.log("Instructor: ",isInstructor)
   if (loading) {
     <Loader></Loader>
 }
