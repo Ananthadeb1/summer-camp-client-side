@@ -5,7 +5,7 @@ const useInstructor = email => {
     const [instructorLoading, setInstructorLoading] = useState(true)
     useEffect(() => {
         if (email) {
-            fetch(`http://localhost:5000/users/instructor/${email}`)
+            fetch(`https://assignment-12-sarver.vercel.app/users/instructor/${email}`)
                 .then(res => res.json())
                 .then(data => {
                     if (data.isInstructor) {

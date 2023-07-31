@@ -6,14 +6,17 @@ import useAdmin from '../hooks/useAdmin';
 import { AuthContext } from '../providers/AuthProvider';
 import Loader from '../components/Loader/Loader';
 import useInstructor from '../hooks/useInstructor';
+import useStudent from '../hooks/useStudent';
 
 
 const Dashboard = () => { 
   const { user, loading } = useContext(AuthContext)
   const [isAdmin] = useAdmin(user?.email)
   const [isInstructor] = useInstructor(user?.email)
+  const [isStudent] = useStudent(user?.email)
   console.log("Admin: ",isAdmin)
   console.log("Instructor: ",isInstructor)
+  console.log("Student: ",isStudent)
   if (loading) {
     <Loader></Loader>
 }
