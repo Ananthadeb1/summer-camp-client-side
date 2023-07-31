@@ -21,7 +21,7 @@ const InstructorsPage = () => {
   return (
     <div className="container bg-slate-800 pt-10">
       <div className='bg-slate-400'>
-      <SectionTitle  heading="Professors of Thewitchery" />
+      <SectionTitle  heading="Professors of The witchery" />
       </div>
      
    
