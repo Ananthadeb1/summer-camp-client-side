@@ -1,6 +1,6 @@
 import {
-    createBrowserRouter,
-  } from "react-router-dom";
+  createBrowserRouter,
+} from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/login";
@@ -11,17 +11,17 @@ import ClassesPage from "../pages/Classes/ClassesPage";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard"
-import Additem from "../pages/Dashboard/AddItem/Additem";
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import HomePage from "../pages/Dashboard/HomePage/HomePage";
 
 
-  export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      errorElement: <Error></Error>,
-      children: [
-        {
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <Error></Error>,
+    children: [
+      {
         path: '/',
         element: <Home></Home>
       },
@@ -45,23 +45,23 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
         path: 'secret',
         element: <PrivateRoute><Secret></Secret></PrivateRoute>
       }
-        
-      ]
-    },
-    {
-        path: 'dashboard',
-        element:<PrivateRoute> <Dashboard></Dashboard> </PrivateRoute>,
-        children:[
-            {
-                path: 'additem',
-                element: <Additem></Additem>
-            },
-            {
-                path: 'adminhome',
-                element: <AdminHome></AdminHome>
-            }
 
-        ]
+    ]
+  },
+  {
+    path: 'dashboard',
+    element: <PrivateRoute> <Dashboard></Dashboard> </PrivateRoute>,
+    children: [
+      {
+        path: '/dashboard',
+        element: <HomePage></HomePage>
+      },
+      {
+        path: 'adminhome',
+        element: <AdminHome></AdminHome>
+      }
 
-    }
-  ]);
+    ]
+
+  }
+]);

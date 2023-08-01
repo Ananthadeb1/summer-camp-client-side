@@ -1,201 +1,96 @@
-import  { useContext, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import SectionTitle from '../components/SecTitle';
-import useAdmin from '../hooks/useAdmin';
+
+import { useContext } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
-import Loader from '../components/Loader/Loader';
+import useAdmin from '../hooks/useAdmin';
 import useInstructor from '../hooks/useInstructor';
 import useStudent from '../hooks/useStudent';
+import Loader from '../components/Loader/Loader'
 
+const Dashboard = () => {
+    const { user, loading } = useContext(AuthContext)
+    const [isAdmin] = useAdmin(user?.email)
+    const [isInstructor] = useInstructor(user?.email)
+    const [isStudent] = useStudent(user?.email)
 
-const Dashboard = () => { 
-  const { user, loading } = useContext(AuthContext)
-  const [isAdmin] = useAdmin(user?.email)
-  const [isInstructor] = useInstructor(user?.email)
-  const [isStudent] = useStudent(user?.email)
-  console.log("Admin: ",isAdmin)
-  console.log("Instructor: ",isInstructor)
-  console.log("Student: ",isStudent)
-  if (loading) {
-    <Loader></Loader>
-}
-  
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    if (loading) {
+        <Loader></Loader>
+    }
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+    return (
+        < div className='bg-slate-800'>
+            <div className='bg-slate-400'>
+            <div className=" mx-auto text-center md:w-4/12 ">
+                <h1 className=" text-3xl uppercase py-4 text-White-400 font-bold" > Dashboard</h1>
+            </div>
+            </div>
+            <div className='flex bg-white flex-col md:flex-row px-4 lg:px-10'>
+                <div className='w-full md:w-[20%]'>
+                    <div className="flex md:h-screen flex-col justify-between border-r bg-white">
+                        <div className="px-4 py-6">
+                            <span className="flex items-center justify-center h-10 w-full rounded-lg bg-slate-800 text-white font-bold">Dashboard</span>
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.5 } },
-    exit: { opacity: 0, transition: { duration: 0.5 } },
-  };
+                            <nav aria-label="Main Nav" className="mt-6 flex flex-col space-y-1">
+                                <Link
+                                    to="/"
+                                    className="flex items-center rounded-lg hover:bg-gray-100 px-4 py-2 text-gray-700"
+                                >
+                                    <span className="ml-3 text-sm font-medium"> Home </span>
+                                </Link>
+                                {
+                                    isStudent &&
+                                    <Link
+                                        to="/dashboard/myorders"
+                                        className="flex items-center rounded-lg hover:bg-gray-100 px-4 py-2 text-gray-700"
+                                    >
+                                        <span className="ml-3 text-sm font-medium"> My Orders </span>
+                                    </Link>
+                                }
+                                {
+                                    isInstructor &&
+                                    <>
+                                        <Link
+                                            to="/dashboard/addclass"
+                                            className="flex items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                        >
+                                            <span className="ml-3 text-sm font-medium">Add A Class</span>
+                                        </Link>
+                                        <Link
+                                            to="/dashboard/myclasses"
+                                            className="flex items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                        >
+                                            <span className="ml-3 text-sm font-medium"> My Classes </span>
+                                        </Link>
+                                    </>
+                                }
+                                {
+                                    isAdmin &&
+                                    <>
+                                        <Link
+                                            to="/dashboard/allClasses"
+                                            className="flex items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                        >
+                                            <span className="ml-3 text-sm font-medium">Manage Classes</span>
+                                        </Link>
+                                        <Link
+                                            to="/dashboard/allusers"
+                                            className="flex items-center rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                        >
+                                            <span className="ml-3 text-sm font-medium">Manage Users</span>
+                                        </Link>
+                                    </>
+                                }
+                            </nav>
+                        </div>
+                    </div>
 
-  return (
-<div>
-<SectionTitle heading="Dashboard " />
-<div className="flex h-screen overflow-hidden bg-gray-100">
-         
-      {/* Sidebar */}
-      <motion.aside
-        className={`flex-shrink-0 w-20 lg:w-64 bg-gray-900 text-white ${
-          isSidebarOpen ? '' : 'hidden lg:block'
-        }`}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        variants={containerVariants}
-      >
-        {/* Sidebar Content */}
-        <div className="p-4">
-          <h3 className="text-xl font-bold mb-4">Menu</h3>
-          <ul>
-            <li> <Link to='/'><button className="block text-white text-left mb-2">Admin Home</button></Link>
-             
-            </li>
-            <li>
-              <button className="block text-white text-left mb-2">Admin Details</button>
-            </li>
-            <li>
-              <button className="block text-white text-left mb-2">All Users</button>
-            </li>
-            <li>
-              <button className="block text-white text-left mb-2">Classes</button>
-            </li>
-            <li>
-              <button className="block text-white text-left mb-2">Instructors</button>
-            </li>
-            <li>
-              <button className="block text-white text-left mb-2">Add Class</button>
-            </li>
-            <li>
-              <button className="block text-white text-left mb-2">Price</button>
-            </li>
-            <li>
-              <button className="block text-white text-left mb-2">User Home</button>
-            </li>
-            <li>
-              <button className="block text-white text-left mb-2">User Details</button>
-            </li>
-            <li>
-                <Link to=''></Link>
-              <button className="block text-white text-left mb-2">User Cart</button>
-            </li>
-            <li>
-              <button className="block text-white text-left mb-2">Payment</button>
-            </li>
-          </ul>
+                </div>
+                <div className='w-full md:w-[80%] border-2'>
+                    <Outlet></Outlet>
+                </div>
+            </div>
         </div>
-      </motion.aside>
-
-      {/* Content */}
-      <div className="flex flex-col flex-1">
-        {/* Header */}
-        <motion.header
-          className="py-4 px-6 bg-gray-200 flex items-center justify-between"
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          variants={containerVariants}
-        >
-          {/* Header Content */}
-          <button
-            className="text-gray-900 focus:outline-none lg:hidden"
-            onClick={toggleSidebar}
-          >
-            {isSidebarOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                
-                  <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </button>
-          {/* Additional header content */}
-        </motion.header>
-
-        {/* Body */}
-        <motion.main
-          className="flex-1 overflow-y-auto"
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          variants={containerVariants}
-        >
-          {/* Body content */}
-          <div className="container mx-auto py-6">
-            {/* Table of classes */}
-            <table className="min-w-full divide-y divide-gray-200">
-              {/* Table headers */}
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Class
-                  </th>
-                  <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Image
-                  </th>
-                  <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Price
-                  </th>
-                  <th className="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Total Price
-                  </th>
-                </tr>
-              </thead>
-              {/* Table body */}
-              <tbody className="bg-white divide-y divide-gray-200">
-                {/* Table rows */}
-                <tr>
-                  <td className="py-4 px-6 whitespace-nowrap">
-                    {/* Class name */}
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap">
-                    {/* Image */}
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap">
-                    {/* Price */}
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap">
-                    {/* Total Price */}
-                  </td>
-                </tr>
-                {/* Add more table rows as needed */}
-              </tbody>
-            </table>
-          </div>
-        </motion.main>
-      </div>
-    </div>
-</div>
-  );
-};
+    );
+}
 
 export default Dashboard;
