@@ -20,9 +20,9 @@ const Dashboard = () => {
     return (
         < div className='bg-slate-800'>
             <div className='bg-slate-400'>
-            <div className=" mx-auto text-center md:w-4/12 ">
-                <h1 className=" text-3xl uppercase py-4 text-White-400 font-bold" > Dashboard</h1>
-            </div>
+                <div className=" mx-auto text-center md:w-4/12 ">
+                    <h1 className=" text-3xl uppercase py-4 text-White-400 font-bold" > Dashboard</h1>
+                </div>
             </div>
             <div className='flex bg-white flex-col md:flex-row px-4 lg:px-10'>
                 <div className='w-full md:w-[20%]'>
@@ -39,12 +39,20 @@ const Dashboard = () => {
                                 </Link>
                                 {
                                     isStudent &&
+                                    <>
                                     <Link
-                                        to="/dashboard/myorders"
+                                        to="/dashboard/myselectedclasses"
                                         className="flex items-center rounded-lg hover:bg-gray-100 px-4 py-2 text-gray-700"
                                     >
-                                        <span className="ml-3 text-sm font-medium"> My Orders </span>
+                                        <span className="ml-3 text-sm font-medium"> My Selected Classes </span>
                                     </Link>
+                                    <Link
+                                        to="/dashboard/myselectedclasses"
+                                        className="flex items-center rounded-lg hover:bg-gray-100 px-4 py-2 text-gray-700"
+                                    >
+                                        <span className="ml-3 text-sm font-medium"> My Selected Classes </span>
+                                    </Link>
+                                </>
                                 }
                                 {
                                     isInstructor &&
