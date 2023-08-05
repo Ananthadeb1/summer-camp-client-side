@@ -5,7 +5,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 
 
+// eslint-disable-next-line react/prop-types
 const FoodCard = ({ item }) => {
+    // eslint-disable-next-line react/prop-types
     const { name, image, price, recipe, _id } = item;
     const {user} = useContext(AuthContext);
     const [, refetch] = useCart();
