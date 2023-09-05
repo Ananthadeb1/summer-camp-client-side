@@ -25,7 +25,7 @@ const PopularInstructor = () => {
         <SectionTitle heading="Best professor of thewitchery " />
       
 
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {popularClasses.map((classItem) => (
           <div className="p-5 border rounded-lg shadow" key={classItem._id}>
             <img className="w-full h-40 object-cover rounded-md mb-4" src={classItem.image} alt="" />

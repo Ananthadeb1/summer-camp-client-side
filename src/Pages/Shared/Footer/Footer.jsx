@@ -10,7 +10,7 @@ const Footer = () => {
               alt="Logo"
               className="h-12 w-12 mr-2"
             />
-            <h2 className=" text-lg font-semibold">The Witchery School of <br /> Witchcraft and Wizardry</h2>
+            <h2 className=" text-lg font-semibold">The Witchery Academy</h2>
           </div>
           <div className="flex flex-col md:flex-row items-center mt-4 md:mt-0">
             <div className="md:mr-8">

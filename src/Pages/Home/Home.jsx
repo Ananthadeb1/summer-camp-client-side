@@ -6,7 +6,7 @@ import PopularInstructor from "./PopularInstructor/PopularInstructor";
 import ExtraSection from "./ExtraSection/ExtraSection";
 
 const Home = () => {
-  
+
 
   return (
     <div>
@@ -14,10 +14,12 @@ const Home = () => {
         <title>THE WITCHERY | Home</title>
       </Helmet>
       <Banner></Banner>
-      <PopularClass></PopularClass>
-      <PopularInstructor></PopularInstructor>
-      <ExtraSection></ExtraSection>
-      
+      <div className="sm:px-16 px-5">
+        <PopularClass></PopularClass>
+        <PopularInstructor></PopularInstructor>
+        <ExtraSection></ExtraSection>
+      </div>
+
     </div>
   );
 };

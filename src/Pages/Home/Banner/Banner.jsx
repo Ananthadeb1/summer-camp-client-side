@@ -16,12 +16,12 @@ const images = [
     return (
         <Carousel>
             {images.map((imageUrl, index) => (
-                <div key={index} className="h-screen flex items-center justify-center">
+                <div key={index} className="sm:h-screen flex items-center justify-center">
                     <img
                         src={imageUrl}
                         alt={`Image ${index + 1}`}
-                        style={{ width: "100%", }}
-                        className="h-full"
+                        style={{ width: "100%"}}
+                        className="sm:h-full "
                     />
                 </div>
             ))}
