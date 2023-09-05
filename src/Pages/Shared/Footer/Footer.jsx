@@ -1,51 +1,50 @@
-
 import logo from '../../../../public/logo.jpg'
 
 const Footer = () => {
     return (
-      <footer className="bg-#10141b outline text-white py-2 m-5 ">
-        <div className="container mx-auto flex flex-col md:flex-row items-center  gap-10 ml-52">
+      <footer className=" outline  py-2 m-5 ">
+        <div className="container  flex flex-col md:flex-row items-center mt-5 md:justify-around">
           <div className="flex items-center justify-center md:justify-start">
             <img
               src={logo}
               alt="Logo"
               className="h-12 w-12 mr-2"
             />
-            <h2 className="text-gray-400  text-lg font-semibold">The Witchery School of <br /> Witchcraft and Wizardry</h2>
+            <h2 className=" text-lg font-semibold">The Witchery School of <br /> Witchcraft and Wizardry</h2>
           </div>
           <div className="flex flex-col md:flex-row items-center mt-4 md:mt-0">
             <div className="md:mr-8">
-              <h3 className="text-gray-400 font-semibold mb-2">Explore</h3>
+              <h3 className=" font-semibold mb-2">Explore</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="#" className=" ">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="#" className="">
                     Instruments
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="#" className="">
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a href="#" className="">
                     Contact
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-gray-400 font-semibold mb-2">Contact Us</h3>
+              <h3 className=" font-semibold mb-2">Contact Us</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-gray-400 mr-2"
+                    className="h-5 w-5  mr-2"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -55,14 +54,14 @@ const Footer = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <a href="tel:+1234567890" className="text-gray-400 hover:text-white">
+                  <a href="tel:+1234567890" className="">
                     +1 (234) 567-890 <br />Send Owls for better <br />communication
                   </a>
                 </li>
                 <li className="flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-gray-400 mr-2"
+                    className="h-5 w-5  mr-2"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -72,14 +71,14 @@ const Footer = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <a href="mailto:info@singerella.com" className="text-gray-400 hover:text-white">
+                  <a href="mailto:info@singerella.com" className="">
                   TheWitchery@harry.com
                   </a>
                 </li>
                 <li className="flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-gray-400 mr-2"
+                    className="h-5 w-5  mr-2"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -89,14 +88,14 @@ const Footer = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-gray-400">Platform 9 3/4, Scotland</span>
+                  <span className="">Platform 9 3/4, Scotland</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="mt-8 py-4 bg-gray-800 text-center">
-          <p className="text-gray-400">
+        <div className="mt-8 py-4  text-center">
+          <p className="">
             &copy; {new Date().getFullYear()} The Witchery. All rights reserved.
           </p>
         </div>

@@ -2,12 +2,24 @@ import { Link } from "react-router-dom";
 import logo from "../../../../public/logo.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
-// import useCart from '../hooks/useCart';
+import { useState } from "react";
+import { useEffect } from "react";
+import { MdDarkMode } from "react-icons/md";
+import './style.css';
 
 const Navbar = () => {
+  const [theme, setTheme] = useState("dark");
   const { user, logOut } = useContext(AuthContext);
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+  }, [theme]);
 
-  // const [cart] = useCart();
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+  };
+  
 
   const handleLogOut = () => {
     logOut()
@@ -54,7 +66,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black text-white">
+    <div className="navbar ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -75,7 +87,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-black"
+            className="menu menu-sm dropdown-content mt-3 p-2 shadow rounded-box w-52 text-black"
           >
             {navItems}
           </ul>
@@ -86,11 +98,8 @@ const Navbar = () => {
           </Link>
           <Link to="/">
             {" "}
-            <p className="normal-case text-2xl font-semibold">
-              The Witchery <br />
-              <span className="text-xl text-gray-200 font-semibold">
-                School of Witchcraft and Wizardry
-              </span>{" "}
+            <p className="lg:text-2xl text-xl font-bold lg:font-semibold">
+              The Witchery Academy
             </p>
           </Link>
         </div>
@@ -99,9 +108,11 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        {/* <input type="checkbox" className="toggle" checked /> */}
+        <button className="theme-toggle btn-danger px-4" onClick={toggleTheme}>
+        <MdDarkMode></MdDarkMode>
+      </button>
         <Link to="/dashboard">
-          <b className="text-base-100 text-lg">Dashboard</b>
+          <b className="text-lg">Dashboard</b>
         </Link>
         {user && (
           <div className="tooltip tooltip-bottom">
